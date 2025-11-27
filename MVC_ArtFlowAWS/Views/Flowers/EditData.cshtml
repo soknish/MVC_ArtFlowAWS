@@ -1,0 +1,38 @@
+﻿@model MVC_ArtFlowAWS.Models.Flower
+<center>
+    <h1>Edit Current Commission Information:</h1>
+    <br /><hr /><br />
+    <form method="post" asp-action="UpdateData" asp-controller="Flowers">
+        <table border='1'>
+            <tr>
+                <th><label asp-for="ArtID"></label></th>
+                <td><input asp-for="ArtID" readonly /></td>
+            </tr>
+            <tr>
+                <th><label asp-for="ArtName"></label></th>
+                <td><input asp-for="ArtName" /></td>
+                <td><span asp-validation-for="ArtName"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="ArtType"></label></th>
+                <td><input asp-for="ArtType" /></td>
+                <td><span asp-validation-for="ArtType"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="ArtPrice"></label></th>
+                <td><input asp-for="ArtPrice" /></td>
+                <td><span asp-validation-for="ArtPrice"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="DateRequested"></label></th>
+                <td><input asp-for="DateRequested" /></td>
+                <td><span asp-validation-for="DateRequested"></span></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:center">
+                    <button type="submit" class="btn-info"> Update Artwork Commission </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>

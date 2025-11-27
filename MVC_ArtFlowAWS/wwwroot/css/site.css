@@ -1,0 +1,209 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* --- 1. Main Page Layout and Containers --- */
+.register-page-container {
+    /* Centers the entire page content and limits its max width */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.register-header {
+    /* Styles for the logo and heading section */
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.app-logo {
+    /* Style for the logo image (assuming a placeholder) */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.register-header h1 {
+    font-weight: 700;
+    color: #343a40; /* Dark text color */
+}
+
+.register-content {
+    /* Uses Flexbox to place the form and the sidebar next to each other */
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+/* --- 2. Registration Form Area --- */
+.register-form-container {
+    flex: 1; /* Takes up the available space */
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    background-color: #ffffff;
+}
+
+.form-floating-group {
+    /* Container for all form inputs */
+    margin-top: 20px;
+}
+
+/* --- 3. Input Styling (Icons and Floating Labels) --- */
+
+/* Ensures enough padding on the input fields for the custom icon */
+.form-floating input {
+    padding-left: 45px !important;
+    border-radius: 8px;
+    height: 60px; /* Taller input fields for modern look */
+}
+
+/* Adjusts the label position when floating */
+.form-floating > label {
+    padding-left: 45px !important;
+    color: #6c757d;
+}
+
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !important;
+}
+
+.icon-placeholder {
+    /* Positioning for the custom icon inside the form-floating div */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none; /* Allows clicks to pass through to the input */
+    z-index: 2; /* Ensures it's above the input border but below the label */
+}
+
+/* --- 4. Password Toggle Specifics --- */
+.password-input-group {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 0;
+    z-index: 3; /* Ensures it's clickable */
+}
+
+/* --- 5. Sidebar and Testimonial Cards --- */
+.register-sidebar {
+    flex: 0 0 380px; /* Fixed width for the sidebar */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-card {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #e9f0f8; /* Light blue/grey background */
+    border: 1px solid #dcdcdc;
+}
+
+.icon-large-green {
+    font-size: 2.5rem;
+    color: #28a745; /* Green icon color */
+    margin-bottom: 10px;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.star-rating {
+    color: #ffc107; /* Yellow star color */
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.what-you-get ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.what-you-get li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    color: #007bff; /* Blue checkmarks */
+    margin-right: 10px;
+}
+
+/* --- 6. Button and Link Adjustments --- */
+.btn-primary {
+    /* Custom button styling if different from default Bootstrap primary */
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.link-primary {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* --- 7. Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    .register-content {
+        /* Stacks the form and sidebar vertically on smaller screens */
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .register-sidebar {
+        flex: 1; /* Allows sidebar to take full width */
+    }
+}

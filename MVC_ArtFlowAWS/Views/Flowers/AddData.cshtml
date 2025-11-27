@@ -1,0 +1,34 @@
+﻿@model MVC_ArtFlowAWS.Models.Flower
+<center>
+    <h1>Add Data Example:</h1>
+    <hr />
+    <form asp-action="AddData" method="post">
+        <table>
+            <tr>
+                <th><label asp-for="ArtName"></label> </th>
+                <td><input asp-for="ArtName" required /></td>
+                <td><span asp-validation-for="ArtName"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="ArtType"></label> </th>
+                <td><input asp-for="ArtType" required /></td>
+                <td><span asp-validation-for="ArtType"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="DateRequested"></label> </th>
+                <td><input asp-for="DateRequested" required /></td>
+                <td><span asp-validation-for="DateRequested"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="ArtPrice"></label> </th>
+                <td><input asp-for="ArtPrice" required /></td>
+                <td><span asp-validation-for="ArtPrice"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" value="Add Commission Requests" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
