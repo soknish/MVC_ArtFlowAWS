@@ -2,6 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
 // Function to handle the show/hide password toggle logic
 function setupPasswordToggle(inputId, toggleButtonId, toggleIconId) {
     // Get the elements using their IDs
@@ -28,10 +29,8 @@ function setupPasswordToggle(inputId, toggleButtonId, toggleIconId) {
     }
 }
 
-// Initialization calls (Run this logic for both password fields)
-// This must be called AFTER the elements have been rendered in the DOM.
 // 1. Password field
 setupPasswordToggle('passwordInput', 'togglePassword', 'toggleIcon');
 
 // 2. Confirm Password field
-setupPasswordToggle('confirmPasswordInput', 'toggleConfirmPassword', 'toggleConfirmIcon');
+//setupPasswordToggle('confirmPasswordInput', 'toggleConfirmPassword', 'toggleConfirmIcon');
