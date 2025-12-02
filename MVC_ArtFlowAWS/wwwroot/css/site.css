@@ -207,3 +207,105 @@ body {
         flex: 1; /* Allows sidebar to take full width */
     }
 }
+
+/* --- Commission Grid Container --- */
+.commission-grid {
+    display: grid;
+    /* Creates a responsive grid: 
+       4 cards max per row, minimum width of 300px per card */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* --- Individual Card Styling (Mimics Screenshot) --- */
+.commission-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+    .commission-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 0;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    /* Optional: Limit lines for type/description */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* --- Detail Rows (Icon + Data) --- */
+.card-details {
+    margin-bottom: 20px;
+    border-top: 1px solid #f7f7f7;
+    padding-top: 15px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.detail-icon {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    width: 20px; /* Fixed width for alignment */
+    margin-right: 10px;
+}
+
+/* Price specific styling */
+.price-row {
+    font-weight: 600;
+    color: #28a745; /* Green for price */
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+    .price-row .detail-icon {
+        color: #28a745; /* Match icon color to price */
+    }
+
+/* --- Actions/Footer --- */
+.card-actions {
+    margin-top: auto; /* Pushes actions to the bottom */
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+}
+
+    /* Ensures buttons fill their allotted space (w-50) */
+    .card-actions .btn {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        border-radius: 6px;
+    }
