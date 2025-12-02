@@ -18,8 +18,10 @@ public class MVC_ArtFlowAWSContext : IdentityDbContext<MVC_ArtFlowAWSUser>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        // Customize the ASP.NET Identity model and override the defaults if needed.
-        // For example, you can rename the ASP.NET Identity table names and more.
-        // Add your customizations after calling base.OnModelCreating(builder);
+
+        // Ensure ArtPrice uses an appropriate SQL type/precision to avoid silent truncation.
+        builder.Entity<Flower>()
+               .Property(f => f.ArtPrice)
+               .HasPrecision(18, 2); // maps to decimal(18,2) in SQL Server
     }
 }

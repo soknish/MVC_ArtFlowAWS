@@ -121,7 +121,7 @@ namespace MVC_ArtFlowAWS.Migrations
 
                     b.HasKey("ArtID");
 
-                    b.ToTable("ArtTable");
+                    b.ToTable("ArtTable", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

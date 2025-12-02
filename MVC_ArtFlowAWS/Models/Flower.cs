@@ -11,5 +11,5 @@ namespace MVC_ArtFlowAWS.Models
         public DateTime DateRequested { get; set; }
         public decimal ArtPrice { get; set; }
 
-    }
+        }
 }
